@@ -1,5 +1,7 @@
 # Ralph/OpenCode loop logs
 .ralph.log
+.ralph.log.jsonl
+.ralph.clean.log
 docs/research/_runs/
 *.tmp
 

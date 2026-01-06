@@ -194,3 +194,6 @@ No task completed, nothing changed, next: nothing
 2026-01-06T05:30:05Z - Removed completed task from prompt.md, all verifiers pass. Next: done.
 2026-01-06T05:11:11Z - Verified clean target in Makefile removes .ralph.log files. All verifiers pass. Next: done.
 2026-01-06T04:10Z - Task already complete (clean target exists in Makefile). Verifiers all pass. Next: done.
+2026-01-06T04:11:28Z - RESEARCH_INSTRUCTIONS.md template verified with proper structure (TASK, SCOPE, SEED LIST, RULES, VERIFIERS). Next: mark task complete
+ - No changes needed, all verifiers pass, task complete
+2026-01-06 05:11:48 - Added .ralph.log.jsonl and .ralph.clean.log to .gitignore. All verifiers pass. Next: done.
