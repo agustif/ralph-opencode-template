@@ -1,0 +1,14 @@
+# Ralph/OpenCode loop logs
+.ralph.log
+docs/research/_runs/
+*.tmp
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+# Node/Python (optional)
+node_modules/
+.venv/
+__pycache__/
