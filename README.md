@@ -1,6 +1,6 @@
 # Ralph Code
 
-A tiny, reusable **while-loop harness** for running long-lived agent iterations with **OpenCode** (`opencode run`),
+A tiny, reusable **while-loop harness** for running long-lived agent Turns with **OpenCode** (`opencode run`),
 
 This repo is intentionally minimal: you edit a single Markdown spec (`prompt.md` and rerun the loop.
 
