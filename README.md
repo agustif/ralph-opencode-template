@@ -1,9 +1,8 @@
-# Ralph Loop + Shitty Deep Research (OpenCode) — Template Repo
+# Ralph Code
 
 A tiny, reusable **while-loop harness** for running long-lived agent iterations with **OpenCode** (`opencode run`),
-plus a ready-to-use **research spec** that generates a competitor matrix + dossiers + patterns + a derived plan.
 
-This repo is intentionally minimal: you edit a single Markdown spec (`prompt.md` or `RESEARCH_INSTRUCTIONS.md`) and rerun the loop.
+This repo is intentionally minimal: you edit a single Markdown spec (`prompt.md` and rerun the loop.
 
 ## Prereqs
 
