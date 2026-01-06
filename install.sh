@@ -20,9 +20,12 @@ fi
 
 chmod +x "$INSTALL_DIR/$RALPH_SH"
 
-echo "Installed to: $INSTALL_DIR/$RALPH_SH"
+# Create symlink without .sh extension for easier usage
+ln -sf "$INSTALL_DIR/$RALPH_SH" "$INSTALL_DIR/ralph"
+
+echo "Installed to: $INSTALL_DIR/ralph"
 echo ""
-echo "Usage: ralph [run|convert] [args...]"
+echo "Usage: ralph [args...]"
 
 if [[ ":$PATH:" != *":$INSTALL_DIR:"* ]]; then
     echo ""

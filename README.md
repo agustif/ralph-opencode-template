@@ -1,50 +1,53 @@
-# Ralph Code
+# ralph-opencode-template
 
-A tiny, reusable **while-loop harness** for running long-lived agent Turns with **OpenCode** (`opencode run`),
+Automation loop for [ralph](https://github.com/agustif/ralph) + [opencode](https://github.com/anomalyco/opencode).
 
-This repo is intentionally minimal: you edit a single Markdown spec (`prompt.md` and rerun the loop.
-
-## Prereqs
-
-- OpenCode CLI installed and configured (`opencode` in PATH)
-- A model/provider configured in OpenCode
-- Basic tools available locally: `git`, `curl` (optional but useful for research)
-
-## Quickstart: run Ralph on any task
-
-1. Edit `prompt.md` with your task, rules, and verifiers.
-2. Run:
+## Install
 
 ```bash
-chmod +x ralph.sh
-./ralph.sh 50 prompt.md
+curl -fsSL https://raw.githubusercontent.com/agustif/ralph-opencode-template/main/install.sh | bash
 ```
 
-The loop stops early when the agent prints:
-
-```
-<promise>COMPLETE</promise>
-```
-
-Logs go to `.ralph.log` (gitignored).
-
-## Quickstart: “shitty deep research” mode
-
-1. Edit `RESEARCH_INSTRUCTIONS.md` (seed list + scope).
-2. Run:
+## Usage
 
 ```bash
-./ralph.sh 30 RESEARCH_INSTRUCTIONS.md
+ralph 50 prompt.md    # Run 50 turns
+ralph --test         # Test mode
+make test            # Run verifiers
+make clean           # Clean logs
 ```
 
-Outputs land in `docs/research/`.
+## Files
 
-## How it works
+- `prompt.md` - Task instructions (edit this)
+- `ralph.sh` - Main script  
+- `Makefile` - Utilities
+- `install.sh` - Installer
 
-- `ralph.sh` is a minimal bounded loop.
-- The spec file (`prompt.md` / `RESEARCH_INSTRUCTIONS.md`) is the *authoritative contract*.
-- The only universal stop condition is the `<promise>COMPLETE</promise>` token.
+Edit `prompt.md` with your task. The script runs opencode in a loop until it sees `<promise>COMPLETE</promise>`.
+
+## Prompt.md Structure
+
+```markdown
+# TASK
+What you want to accomplish.
+
+# SCOPE  
+Boundaries and constraints.
+
+# RULES
+- Must pass all verifiers
+- Keep changes minimal
+- Follow project conventions
+
+# VERIFIERS
+- [[ -f "file.txt" ]]
+- command
+- grep -q "pattern" file
+```
+
+The loop stops when all verifiers pass and the agent outputs `<promise>COMPLETE</promise>`.
 
 ## License
 
-MIT (see `LICENSE`).
+MIT
