@@ -46,12 +46,6 @@ Outputs land in `docs/research/`.
 - The spec file (`prompt.md` / `RESEARCH_INSTRUCTIONS.md`) is the *authoritative contract*.
 - The only universal stop condition is the `<promise>COMPLETE</promise>` token.
 
-## Publishing as a GitHub template
-
-- Push this repo to GitHub.
-- In GitHub: **Settings → Template repository → Enable**.
-- Users can click **Use this template**.
-
 ## License
 
 MIT (see `LICENSE`).
